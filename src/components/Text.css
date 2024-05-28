@@ -1,0 +1,17 @@
+  .line {
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    font-size: 12px;
+    text-align: center;
+    width: 30px;
+    height: 10px;
+    padding: 2px 0px;
+    user-select: none; 
+    text-transform: uppercase;
+ }
+
+ .line.medium{
+    width: 60px;
+    padding-top: 5px;   
+ }
+ 

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between items to push the right section to the edge */
+    height: 48px;
+    background-color: #d6dce9;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    padding: 0 10px; /* Optional: Adds some padding to the sides */
+  }
+  
+  .taskbar-left {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left within this section */
+  }
+
+  .taskbar-centre {
+    display: flex;
+    flex-grow: 1; /* Allow the centre section to grow and take up space */
+    justify-content: center; /* Center the items within this section */
+  }
+  
+  .taskbar-right {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right within this section */
+    margin-right: 40px;
+    margin-left: 0px;
+  }
+  
+  .taskbar-icon {
+    padding: 5px;
+    margin-top: 5px;;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  .taskbar-icon.right{
+    margin: 5px 0px;
+  }
+
+  
+  .taskbar-icon.small{
+    width: 30px;
+    height: 40px;
+  }
+
+  .taskbar-icon.medium{
+    width: 60px;
+    height: 40px;
+    padding: 0px 5px;
+  }
+
+  .taskbar-icon:hover {
+    /* transform: scale(1.1); */
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: #edf0fa;
+    /* rgba(237,240,250,255); */
+  }
+
+  
+  

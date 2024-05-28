@@ -1,0 +1,46 @@
+/* Search input container style */
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+  }
+  
+  .search-input {
+    padding-left: 35px; /* space for the icon */
+    height: 30px;
+    padding-top: 1px;
+    background-color: #f5f7fd;
+    /* rgba(245,247,253,255); */
+    border-radius: 50px;
+    border: 1px solid #b7bfce;
+    margin-top: 5px;
+  }
+  
+  .search-input-icon {
+    margin-top: 5px;
+    padding-left: 5px;
+    margin-right: 5px;
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* allows clicking through the icon to the input */
+  }
+
+  .search-input:hover{
+    background-color: #ecf0f9;
+  }
+
+  .search-input:focus {
+    outline: none; /* Removes the default focus outline */
+    border: 1px solid #b7bfce; /* Adds a border when focused */
+    cursor: context-menu;
+  }
+
+  .taskbar-search-icon {
+    margin-right: 5px;
+    width: 200px;
+    height: 35px;
+  }
+
