@@ -46,58 +46,10 @@ const NotrificationArea = () => {
     }
   };
 
-//   const [isCharging, setIsCharging] = useState(false);
-//   const [batteryLevel, setBatteryLevel] = useState(0);
+  const [isCharging, setIsCharging] = useState(false);
+  const [batteryLevel, setBatteryLevel] = useState(0);
 
-//   // Example effect to simulate state changes (you can replace it with real logic)
-//   useEffect(() => {
-//     let battery;
-
-//     const updateBatteryStatus = (battery) => {
-//       setIsCharging(battery.charging);
-//       setBatteryLevel(battery.level * 100);
-
-//       var str = JSON.stringify(battery);
-//       console.log("battery: "+ str);
-//       console.log("battery.charging: "+ battery.charging);
-//       console.log("battery.level: "+ battery.level);
-//       console.log("battery: "+ isCharging);
-//     };
-
-//     const handleBatteryStatus = (event) => {
-//       updateBatteryStatus(event.target);
-//     };
-
-//     const updateStatus = () => {
-//         navigator.getBattery().then((bat) => {
-//             battery = bat;
-            
-//             updateBatteryStatus(battery);
-      
-//             battery.addEventListener('chargingchange', handleBatteryStatus);
-//             battery.addEventListener('levelchange', handleBatteryStatus);
-//         })
-//     }
-
-//     const interval = setInterval(() => {
-//         console.log("setInterval\n");
-//         {isCharging ? ( setBatteryPercentage(prev => (prev < 100 ? prev + 10 : 0)) // simulate battery percentage change
-//           ) : (
-//             setBatteryPercentage(batteryLevel)
-//           )}
-//           updateStatus();
-//           console.log("isCharging: "+ isCharging);
-//     //   setBatteryPercentage(prev => (prev < 100 ? prev + 10 : 0)); // simulate battery percentage change
-//     // setWifiStatus(prev => (prev === 'enabled' ? ( prev === 'disconnected'? 'airplanemode' : 'disconnected') : 'enabled')); // simulate WiFi status change
-//     // setSoundStatus(prev => (prev === 'on' ? 'mute' : 'on')); // simulate sound status change
-//     }, 1000);
-//     return () => clearInterval(interval);
-//   }, []);
-
-    const [isCharging, setIsCharging] = useState(false);
-    const [batteryLevel, setBatteryLevel] = useState(0);
-
-    useEffect(() => {
+  useEffect(() => {
     let battery;
 
     const updateBatteryStatus = (battery) => {
@@ -119,7 +71,6 @@ const NotrificationArea = () => {
     };
 
     updateStatus(); // Initial call to set battery status
-
     const interval = setInterval(() => {
         updateStatus(); // Update battery status every second
     }, 1000);
@@ -131,22 +82,26 @@ const NotrificationArea = () => {
         battery.removeEventListener('levelchange', handleBatteryStatus);
         }
     };
-    }, []);
+  }, []);
 
-    const abc = ()=>{
-        console.log("isCharging : "+ isCharging);
-        
-        isCharging ? ( setBatteryPercentage(prev => (prev < 100 ? prev + 10 : 0)) // simulate battery percentage change
-          ) : (
-            setBatteryPercentage(batteryLevel)
-          )
-    }    
+  useEffect(() => {
+    if (isCharging) {
+      const intervalId = setInterval(() => {
+        setBatteryPercentage((prev) => {
+          const newLevel = prev < 100 ? prev + 10 : 0;
+          console.log("batteryLevel update:=> " + newLevel);
+          return newLevel;
+        });
+      }, 2000); // 2 seconds delay
 
-    useEffect(() => {
-    console.log("isCharging: ", isCharging);
-    console.log("batteryLevel: ", batteryLevel);
-    }, [isCharging, batteryLevel]); // Logs whenever isCharging or batteryLevel changes
-
+      // Cleanup the interval when component unmounts or isCharging changes
+      return () => clearInterval(intervalId);
+    }
+    else{
+      console.log("batteryLevel now stable:=> " + batteryLevel);
+      setBatteryPercentage(batteryLevel);
+    }
+  }, [isCharging, batteryLevel]);
 
   return (
     <div className='taskbar-icon notrification'>
