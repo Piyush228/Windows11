@@ -26,7 +26,7 @@ const RightIcons = () => {
   return (
     <>
       {/* <SmallIcon iconName='Show hidden icons' iconUrl={`${process.env.PUBLIC_URL}/Collapse-arrow-icon.png`} /> */}
-      <Icon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`}/>
+      <Icon iconName='Game' iconUrl= {`${process.env.PUBLIC_URL}/game-controller.png`}/>
       <Text FirstLine={"ENG"} SecondLine={"IN"} ClassName={"right"}/>
       <NotrificationArea />
       <Text FirstLine={dateTime.time} SecondLine={dateTime.date} ClassName={"medium right"} />

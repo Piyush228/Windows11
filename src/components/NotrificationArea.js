@@ -48,6 +48,10 @@ const NotrificationArea = () => {
 
   const [isCharging, setIsCharging] = useState(false);
   const [batteryLevel, setBatteryLevel] = useState(0);
+  const [status, setStatus] = useState({
+    online: navigator.onLine,
+    airplaneMode: false,
+  });
 
   useEffect(() => {
     let battery;
@@ -68,6 +72,12 @@ const NotrificationArea = () => {
         battery.addEventListener('chargingchange', handleBatteryStatus);
         battery.addEventListener('levelchange', handleBatteryStatus);
         });
+
+        const isOnline = navigator.onLine;
+        setStatus({
+          online: isOnline,
+          airplaneMode: !isOnline && !navigator.connection,
+        });
     };
 
     updateStatus(); // Initial call to set battery status
@@ -75,11 +85,18 @@ const NotrificationArea = () => {
         updateStatus(); // Update battery status every second
     }, 1000);
 
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+
     return () => {
         clearInterval(interval);
         if (battery) {
-        battery.removeEventListener('chargingchange', handleBatteryStatus);
-        battery.removeEventListener('levelchange', handleBatteryStatus);
+          battery.removeEventListener('chargingchange', handleBatteryStatus);
+          battery.removeEventListener('levelchange', handleBatteryStatus);
+        }
+        if(window){
+          window.removeEventListener('online', updateStatus);
+          window.removeEventListener('offline', updateStatus);
         }
     };
   }, []);
@@ -89,19 +106,27 @@ const NotrificationArea = () => {
       const intervalId = setInterval(() => {
         setBatteryPercentage((prev) => {
           const newLevel = prev < 100 ? prev + 10 : 0;
-          console.log("batteryLevel update:=> " + newLevel);
           return newLevel;
         });
-      }, 2000); // 2 seconds delay
+      }, 1000); // 1 seconds delay
 
       // Cleanup the interval when component unmounts or isCharging changes
       return () => clearInterval(intervalId);
     }
     else{
-      console.log("batteryLevel now stable:=> " + batteryLevel);
       setBatteryPercentage(batteryLevel);
     }
   }, [isCharging, batteryLevel]);
+
+  useEffect(() => {
+    if (status.airplaneMode) {
+      setWifiStatus('airplanemode');
+    } else if (status.online) {
+      setWifiStatus('enabled');
+    } else {
+      setWifiStatus('disconnected');
+    }
+  }, [status]);
 
   return (
     <div className='taskbar-icon notrification'>
