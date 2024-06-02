@@ -1,11 +1,15 @@
 /* Search input container style */
-.search-input-container {
+ .search-input-container {
     position: relative;
     display: flex;
     align-items: center;
     margin-top: 3px;
   }
   
+  .search-input-container.large {
+    margin: 20px 30px;
+  }
+
   .search-input {
     padding-left: 35px; /* space for the icon */
     height: 30px;
@@ -15,6 +19,9 @@
     border-radius: 50px;
     border: 1px solid #b7bfce;
     margin-top: 5px;
+  }
+  .search-input.large{
+    width: 500px;
   }
   
   .search-input-icon {
@@ -43,4 +50,10 @@
     width: 200px;
     height: 35px;
   }
+
+  .taskbar-search-icon.large {
+    width: 550px;
+    height: 60px;
+  }
+
 

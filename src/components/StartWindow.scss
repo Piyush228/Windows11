@@ -1,0 +1,98 @@
+ .windows-component-container{
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 60px; /* Adjust this value based on the height of your icon */
+    background-color: #f5f5f5; /* Ensure it's visible against the background */
+    z-index: 1000; /* Ensure it appears above other elements */  
+    height: 580px;
+    width: 550px;
+ }
+
+ .start-user-features-component{
+    height: 500px; // need to change ar last
+    width: 550px;
+ }
+
+ .start-user-taskbar-component{
+    border-top: 1px solid #b5b5b5;
+    display: flex;
+    height: 59px;
+    width: 550px;
+    background-color: #eaeaea;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+ }
+
+ .start-icon-container-left {
+    display: flex;
+    height: 59px;
+    width: 350px;
+ }
+ 
+ .start-user-component{
+    display: flex;
+    margin: 8px 0px 5px 53px;
+    padding-top: 5px;
+    height: 36px;
+    text-align: left;
+ }
+
+ .start-user-component:hover {
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: white;
+ }
+
+ .start-icon{
+    width: 30px;
+    height: 32px;
+    padding: 0px 5px;
+ }
+
+ .line-text-bar {
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    font-size: 12px;
+    text-align: left;
+    width: 100px;
+    height: 15px;
+    padding: 8px 0px;
+    margin: 0px 60px 0px 2px;
+    user-select: none; 
+    text-transform:capitalize;
+ }
+
+ .line-text-bar.bold{
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 55px;     
+    width: 100px; 
+ }
+
+ .start-icon-container-right {
+    height: 59px;
+    width: 200px;
+ }
+
+ .power-icon{
+    width: 20px;
+    height: 20px;
+    margin: 7px 0px 5px 110px;
+    padding: 10px;
+ }
+
+ .power-icon:hover{
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: white; 
+ }
+
+ .start-features-icon{
+    display: flex;
+ }
+
+ .pinned-features-icon{
+    display: flex;
+    margin: 0px 40px;
+ }

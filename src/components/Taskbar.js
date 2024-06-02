@@ -5,6 +5,7 @@ import SearchIcon from './SearchIcon';
 import RightIcons from './RightIcons';
 // import SmallIcon from './SmallIcon';
 import Icon from './Icon';
+import StartWindow from './StartWindow';
 
 // Set the root element for react-modal
 Modal.setAppElement('#root');
@@ -16,7 +17,7 @@ const Taskbar= ()=> {
         <Icon iconName='Portfolio' iconUrl={`${process.env.PUBLIC_URL}/portfolio.png`} />
       </div>
       <div className="taskbar-centre">
-        <Icon iconName='Start' iconUrl= {`${process.env.PUBLIC_URL}/start-icon.png`}/>
+        <Icon iconName='Start' iconUrl= {`${process.env.PUBLIC_URL}/start-icon.png`} componentName= {StartWindow}/>
         <SearchIcon />
         <Icon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`}/>
         <Icon iconName='Chrome' iconUrl= {`${process.env.PUBLIC_URL}/chrome-icon.svg`}/>
