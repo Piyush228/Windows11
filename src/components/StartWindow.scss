@@ -3,7 +3,7 @@
     border-radius: 8px;
     position: absolute;
     bottom: 60px; /* Adjust this value based on the height of your icon */
-    background-color: #f5f5f5; /* Ensure it's visible against the background */
+    background-color: #edf0fa;//#f5f5f5; /* Ensure it's visible against the background */
     z-index: 1000; /* Ensure it appears above other elements */  
     height: 580px;
     width: 550px;
@@ -19,7 +19,7 @@
     display: flex;
     height: 59px;
     width: 550px;
-    background-color: #eaeaea;
+    background-color: #edf0fa;//#eaeaea;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
  }
