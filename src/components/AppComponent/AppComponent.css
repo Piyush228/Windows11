@@ -1,0 +1,65 @@
+/* src/Notepad.css */
+  .Notepad {
+    text-align: center;
+    position: relative;
+  }
+  
+  .Notepad-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 70vh;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .dark-mode .Notepad-header {
+    background-color: #1e1e1e;
+  }
+  
+  .dark-mode textarea {
+    background-color: #333;
+    color: white;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  
+  .notepad-iframe {
+    width: 100%;
+    height: 500px;  /*Adjust height as needed */
+    border: none;  /*Remove default iframe border */
+  }
+  
+  .app-component-container {
+    height: 50vh;
+    width: 50vh;
+    padding: 20px;
+    border: 1px solid #ccc;
+    cursor: move;  /* Change cursor to indicate draggable area */
+    position: absolute;  /* Use absolute positioning for dragging */
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 60px; /* Adjust this value based on the height of your icon */
+    background-color: white; /* Ensure it's visible against the background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    color: green;
+  }
+  
