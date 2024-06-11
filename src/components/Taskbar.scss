@@ -14,6 +14,7 @@ body {
     bottom: 0;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
     padding: 0 10px; /* Optional: Adds some padding to the sides */
+    z-index: 70000;
   }
   
   .taskbar-left {
@@ -64,14 +65,4 @@ body {
     border-radius: 5px;
     background-color: #edf0fa;
     /* rgba(237,240,250,255); */
-  }
-
-  .another-component-container {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    bottom: 60px; /* Adjust this value based on the height of your icon */
-    background-color: white; /* Ensure it's visible against the background */
-    z-index: 1000; /* Ensure it appears above other elements */
   }

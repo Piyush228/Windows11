@@ -3,28 +3,29 @@ import Modal from 'react-modal';
 import './Taskbar.scss';
 import SearchIcon from './SearchIcon';
 import RightIcons from './RightIcons';
-// import SmallIcon from './SmallIcon';
 import Icon from './Icon';
 import StartWindow from './StartWindow';
-
-// Set the root element for react-modal
+import AppIcon from './AppIcon';
+import AppComponent from './AppComponent/AppComponent';
+import Notepad from './Notepad/Notepad';
 Modal.setAppElement('#root');
 
 const Taskbar= ()=> {
   return (
     <div className="taskbar">
        <div className="taskbar-left">
-        <Icon iconName='Portfolio' iconUrl={`${process.env.PUBLIC_URL}/portfolio.png`} />
+        <Icon iconName='Portfolio' iconUrl={`${process.env.PUBLIC_URL}/portfolio.png`} message="My Portfolio :"/>
       </div>
       <div className="taskbar-centre">
         <Icon iconName='Start' iconUrl= {`${process.env.PUBLIC_URL}/start-icon.png`} componentName= {StartWindow}/>
         <SearchIcon />
-        <Icon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`}/>
-        <Icon iconName='Chrome' iconUrl= {`${process.env.PUBLIC_URL}/chrome-icon.svg`}/>
-        <Icon iconName='Edge' iconUrl= {`${process.env.PUBLIC_URL}/edge-icon.svg`}/>
+        <AppIcon iconName='Notepad' iconUrl= {`${process.env.PUBLIC_URL}/Notepad.png`} componentName={AppComponent} childComponentName={Notepad}/>
+        {/* <AppIcon iconName='Notepad' iconUrl= {`${process.env.PUBLIC_URL}/Notepad.png`} componentName={AppComponent} childComponentName={Chrome}/> */}
+        <Icon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`} message="Github Profile:" myLink="https://github.com/Piyush228"/>
+        <Icon iconName='Chrome' iconUrl= {`${process.env.PUBLIC_URL}/chrome-icon.svg`} />
+        <Icon iconName='Photos' iconUrl= {`${process.env.PUBLIC_URL}/photos.png`}/>
         <Icon iconName='File Explorer' iconUrl= {`${process.env.PUBLIC_URL}/file-explorer-icon.png`}/>
-        <Icon iconName='LinkedIn' iconUrl= {`${process.env.PUBLIC_URL}/linked-in-icon.svg`}/>
-        <Icon iconName='Visual Studio Code' iconUrl= {`${process.env.PUBLIC_URL}/visual-studio-code.svg`}/>
+        <Icon iconName='LinkedIn' iconUrl= {`${process.env.PUBLIC_URL}/linked-in-icon.svg`} message="LinkedIn Profile:"/>
       </div>
       <div className="taskbar-right">
         <RightIcons />    
