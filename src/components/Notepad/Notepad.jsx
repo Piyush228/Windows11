@@ -1,16 +1,9 @@
 import React from 'react';
 import './Notepad.css';
 
-const Notepad = () => {
+const Notepad = ({isDarkMode, isMaximize}) => {
   return (
-    <div className="another-component-container">
-      <h2>Hello, I'm Notepad!</h2>
-      <iframe 
-        src="https://www.example.com" 
-        title="Notepad Iframe" 
-        className="notepad-iframe"
-      ></iframe>
-    </div>
+    <textarea className={`textArea ${isDarkMode? 'dark': ''} ${isMaximize ? 'maximize': ''}`}></textarea>
   );
 };
 
