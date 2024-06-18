@@ -1,11 +1,17 @@
 import React, { useState, useRef } from 'react';
 import './AppComponent.css';
 
-const AppComponent = () => {
+const AppComponent = ({name, imgUrl, childComponentName: Component, handleToggle}) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDarkMode, setIsDarkMode] = useState(false); // State for theme
+  const [isMaximize, setIsMaximize] = useState(false);
   const notepadRef = useRef(null);
-
+  
   const handleMouseDown = (e) => {
+    if (!e.target.closest('.title-bar')) return;
+
+    if (isMaximize) return; // Disable drag when maximized
+    
     const startX = e.clientX - position.x;
     const startY = e.clientY - position.y;
 
@@ -24,17 +30,46 @@ const AppComponent = () => {
     document.addEventListener('mouseup', handleMouseUp);
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const handleToggleMaximize = () => {
+    setIsMaximize(!isMaximize);
+    if (!isMaximize) {
+      setPosition({ x: 0, y: 0 }); // Reset position when maximizing
+    }
+  }
+
   return (
-    <>
-      <div
-        className="app-component-container"
-        style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
+    <div
+        className={`app-component-container ${isMaximize ? 'maximize': ''}`}
+        style={isMaximize ? {} : { transform: `translate(${position.x}px, ${position.y}px)` }}
         ref={notepadRef}
         onMouseDown={handleMouseDown}
-      >
-        <h2>Hello, I'm temp_Notepad!</h2>
-      </div>
-    </>
+    >
+        <div className={`title-bar ${isDarkMode ? 'dark' : ''} ${isMaximize ? 'maximize': ''}`}>
+            <div className={`title-bar-content ${isMaximize ? 'maximize': ''}`}>
+                <img src={imgUrl} alt={name} className="icon-img" />
+                <div className={`title-name ${isDarkMode ? 'dark' : ''} ${isMaximize ? 'maximize': ''}`}>
+                    <p className={`text ${isMaximize ? 'maximize': ''}`}>{`${name}`}</p>
+                    <img src={`${process.env.PUBLIC_URL}/cross-${isDarkMode ? 'dark' : 'light'}.png`} className={`cross-img ${isMaximize ? 'maximize': ''}`}/>
+                </div>
+                <img 
+                    onClick={toggleTheme} 
+                    src={`${process.env.PUBLIC_URL}/mode-${isDarkMode ? 'light' : 'dark'}.png`}
+                    style={{background: `${isDarkMode ? 'rgb(234, 234, 248)': '#333'}`}}
+                    className={`mode-icon ${isMaximize ? 'maximize': ''}`}
+                />
+            </div>
+            <div className={`caption-button ${isMaximize ? 'maximize': ''}`}>
+                <img onClick={handleToggle} src={`${process.env.PUBLIC_URL}/minimize-${isDarkMode ? 'dark' : 'light'}.png`} className={`cross-img ${isMaximize ? 'maximize': ''}`} />
+                <img onClick={handleToggleMaximize} src={`${process.env.PUBLIC_URL}/maximise-${isDarkMode ? 'dark' : 'light'}.png`} className={`cross-img ${isMaximize ? 'maximize': ''}`}/>
+                <img onClick={handleToggle} src={`${process.env.PUBLIC_URL}/cross-${isDarkMode ? 'dark' : 'light'}.png`} className={`cross-img imp ${isMaximize ? 'maximize': ''}`}/>
+            </div>
+        </div>
+        <Component isDarkMode={isDarkMode} isMaximize={isMaximize}/>
+    </div>
   );
 };
 
