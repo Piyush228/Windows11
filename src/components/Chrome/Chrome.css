@@ -1,0 +1,156 @@
+.chrome-component-container{
+    height: 45vh;
+    width: 40vw;
+    border-radius: 0 0 10px 10px;
+    font-family: arial,sans-serif;
+    font-size: 11px;
+}
+
+.chrome-component-container.maximize{
+    height: 88vh;
+    width: 100vw;
+    border-radius: 0px;
+}
+
+.chrome-component-container.dark{
+    background-color: #333;
+    color: azure;
+}
+    
+.chrome-header{
+    display: flex;
+    height: 5vh;
+    justify-content: end;
+}
+
+.chrome-header.maximize{
+    height: 8vh;
+}
+
+.chrome-header img{
+    height: 4vh;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+.user-image.maximize{
+    padding: 1.5vh;
+}
+
+.chrome-text{
+    padding: 2vh 0px 1vh 2vh;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.chrome-text.maximize{
+    padding: 2.8vh 1.8vh;
+}
+
+.google-logo{
+    height: 11vh;
+    width: 14vw;
+    padding: 3vh 13vw 1vh 13vw;
+    margin: 0px;
+}
+
+.google-logo.maximize{
+    height: 13vh;
+    width: 18vw;
+    padding: 3vh 13vw 1vh 13vw;
+    margin: 0px;
+    margin: 40px 28vw 20px 28vw;
+}
+
+.search-bar.maximize{
+    margin-left: 32vw;
+}
+
+.large.chrome-search{
+    margin: 0px 15px 0px 25px;
+    height: 5vh;
+}
+.chrome-search.maximize{
+    margin: 0 0 10px 0;
+    height: 5.5vh;
+}
+
+.chrome-body{
+    justify-content: center;
+}
+
+.h1{
+    color: rgba(255, 255, 255, 1.00);
+}
+
+.start-features-icon.google-components{
+    justify-content: center;
+    height: 15vh;
+    margin-top: 5px;
+}
+
+ .chrome-taskbar{
+    display: flex;
+    padding-top: 25vh;
+    justify-content: end;
+ }
+
+ .customise-tab {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 15px;
+    width: 9.2vw;
+    padding: 10px 15px;
+    background-color: #d3e3fdff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 10.5px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 1px 3px 0 #20212447;
+}
+
+.customise-tab:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.customise-tab:active {
+    background-color: #e0e0e0;
+    transform: translateY(0);
+}
+
+.customise-tab.dark{
+    background-color: #004a77ff; 
+    color: #fff;
+}
+
+.customise-tab.dark:hover{
+    background-color:#041e49ff;
+}
+
+.customise-image {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    padding-left: 0px;
+    transition: transform 0.3s ease;
+}
+
+.chrome-text.maximize {
+    transform: scale(1.2);
+}
+
+
+ .chrome-pinned-icon-container{
+    margin: 10px;
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+ } 
+
+ .chrome-pinned-icon-container:hover {
+    background-color: rgb(128, 134, 139);
+ }
+
