@@ -25,8 +25,7 @@ const RightIcons = () => {
 
   return (
     <>
-      {/* <SmallIcon iconName='Show hidden icons' iconUrl={`${process.env.PUBLIC_URL}/Collapse-arrow-icon.png`} /> */}
-      <Icon iconName='Game' iconUrl= {`${process.env.PUBLIC_URL}/game-controller.png`}/>
+      <Icon iconName='Game' iconUrl= {`${process.env.PUBLIC_URL}/game-controller.png`} message="My First Project: " myLink="https://phoenix-gaming-website.netlify.app/"/>
       <Text FirstLine={"ENG"} SecondLine={"IN"} ClassName={"right"}/>
       <NotrificationArea />
       <Text FirstLine={dateTime.time} SecondLine={dateTime.date} ClassName={"medium right"} />

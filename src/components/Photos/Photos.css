@@ -4,6 +4,7 @@
     height: 45vh;
     overflow: hidden;
     border-radius: 0 0 10px 10px;
+    outline: none;
   }
   .image-slider.dark{
     background-color: #333;

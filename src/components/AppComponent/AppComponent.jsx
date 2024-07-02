@@ -1,11 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import './AppComponent.css';
 
-const AppComponent = ({name, imgUrl, childComponentName: Component, handleToggle}) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+const AppComponent = ({name, imgUrl, childComponentName: Component, handleToggle, screenIcons}) => {
+  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isDarkMode, setIsDarkMode] = useState(false); // State for theme
   const [isMaximize, setIsMaximize] = useState(false);
   const notepadRef = useRef(null);
+
+  useEffect(() => {
+    if (screenIcons) {
+      setPosition({ x: 300, y: -100 });
+    }
+  }, [screenIcons]);
   
   const handleMouseDown = (e) => {
     if (!e.target.closest('.title-bar')) return;

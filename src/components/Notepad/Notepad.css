@@ -1,56 +1,29 @@
-/* src/Notepad.css */
-.Notepad {
-  text-align: center;
-  position: relative;
-}
-
-.Notepad-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-textarea {
-  width: 80%;
-  height: 70vh;
-  margin: 20px 0;
-  padding: 10px;
+.textArea {
+  cursor: text;
+  height: 43vh;
+  width: 38.05vw;
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
+  padding: 1vh 1vw;
+  border: 0px;
+  border-radius: 0 0 10px 10px;
+  resize: none;
+  z-index: 500;
 }
 
-.dark-mode .Notepad-header {
-  background-color: #1e1e1e;
-}
-
-.dark-mode textarea {
+.textArea.dark{
   background-color: #333;
-  color: white;
+  color: whitesmoke;
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+.textArea.maximize{
+  height: calc(100% - 48px);
+  width: 100vw;
+  border-radius: 0px;
 }
 
-
-.notepad-iframe {
-  width: 100%;
-  height: 500px;  /* Adjust height as needed */
-  border: none;  /* Remove default iframe border */
-}
-
-.another-component-container {
-  padding: 20px;
-  border: 1px solid #ccc;
-  cursor: move;  /* Change cursor to indicate draggable area */
-  position: absolute;  /* Use absolute positioning for dragging */
-  background-color: white;
+.textArea:focus {
+  border: 0px; /* Remove border on focus */
+  padding: 1vh 1vw; /* Remove padding on focus */
+  outline: none; /* Remove default focus outline */
 }
