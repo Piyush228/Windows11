@@ -3,16 +3,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Icon.css';
 import AnotherComponent from './AnotherComponent.jsx';
-import { GAME_LINK } from "./Constants.js";
 
-const Icon = ({ iconName, iconUrl, componentName: Component = AnotherComponent}) => {
+const Icon = ({ iconName, iconUrl, componentName: Component = AnotherComponent, message="On Progress! ", myLink="#"}) => {
 
   const [showComponent, setShowComponent] = useState(false);
+  const [active, setActive] = useState(false);
   const buttonRef = useRef(null);
   const componentRef = useRef(null);
 
   const handleToggle = () => {
     setShowComponent(!showComponent);
+    setActive(true);
+    setTimeout(() => setActive(false), 200);
   };
 
   const handleClickOutside = (event) => {
@@ -40,8 +42,8 @@ const Icon = ({ iconName, iconUrl, componentName: Component = AnotherComponent})
   
   return (
     <div className='icon-container'>
-      {showComponent && <div ref={componentRef}><Component /></div>}
-      <img onClick={handleToggle} ref={buttonRef} src={iconUrl} alt={iconName} className="taskbar-icon" />
+      {showComponent && <div ref={componentRef}><Component messageBody={message} iconUrl={iconUrl} myLink={myLink}/></div>}
+      <img onClick={handleToggle} ref={buttonRef} src={iconUrl} alt={iconName} className={`taskbar-icon ${active ? 'active' : ''}`} />
     </div>
   );
 };

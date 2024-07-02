@@ -1,0 +1,255 @@
+.windows-explorer{
+    height: 41vh;
+    width: 40vw;
+    border-radius: 0 0 10px 10px;
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    display: flex;
+}
+
+.windows-explorer.dark{
+    background-color: #454545;
+}
+
+.windows-explorer.maximize{
+    height: calc(100% - 10vh);
+    width: 100vw;
+    border-radius: 0;
+}
+
+.file-list-component{
+    height: 41vh;
+    width: 12vw;
+    border-right: solid 1px #333;
+}
+
+.file-list-component.maximize{
+    height: calc(100%);
+    border-right: solid 1px #333;
+}
+
+.list-icon-component{
+    padding-top: 1vh;
+}
+
+.file-list-component.dark{
+    color:#ffffff;
+}
+
+.folder-icon-component{
+    display: flex;
+    /* background-color: cadetblue; */
+    padding: 4px;
+    padding-left: 1vw;
+}
+
+.folder-icon-component:hover{
+    background-color: #eceffa;
+}
+
+.folder-icon-component.dark:hover{
+    color: #333;
+}
+
+.folder-icon{
+    height: 3vh;
+    width: 3vh;
+}
+
+.folder-icon.max{
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
+.folder-text{
+    padding: 5px;
+}
+
+.folder-text.max{
+    padding: 0.5vh 7px;
+}
+
+.seperator{
+    margin: 10px;
+    border-bottom: solid 1px black;
+}
+
+.windows-navbar{
+    height: 4vh;
+    width: 40vw;
+    border-bottom: solid 1px #333;
+    display: flex;
+    font-family: arial,sans-serif;
+}
+
+.windows-navbar.maximize{
+    height: 5vh;
+    width: 100vw;
+}
+
+.windows-navbar.dark{
+    background-color: #333;
+}
+
+.windows-icons{
+    height: 2vh;
+    width: 2vh;
+    padding: 1vh;
+}
+
+.windows-icons.maximize{
+    height: 2.7vh;
+    width: 2.7vh;
+}
+
+.home-folder-icon{
+    height: 2vh;
+    width: 2vh;
+    padding: calc(.5vh - 2px) .5vh;
+}
+
+.home-folder-icon.maximize{
+    height: 3vh;
+    width: 3vh;
+    padding: .5vh 1vh;
+}
+
+.search-folder-icon{
+    height: 2vh;
+    width: 2vh;
+    padding: calc(.5vh - 2px) .5vh;
+    padding-left: 0px;
+}
+
+.search-folder-icon.maximize{
+    height: 3vh;
+    width: 3vh;
+    padding: .5vh;
+}
+
+.windows-home-navbar{
+    margin: .5vh;
+    display: flex;
+    border: solid 1px #787878;
+    width: 19vw;
+}
+
+.windows-home-navbar.maximize{
+    width: 60vw;
+    border-radius: 5px;
+    margin-left: 1vw;
+}
+
+.windows-folder-text{
+    margin: 2px 1vh;
+    font-size: 12px;
+    padding-right: 11vh;
+}
+
+.windows-folder-text.maximize{
+    font-size: 1.9vh;
+    margin: 1vh 1.5vh;
+    padding-right: 5vw;
+    margin-right: 16.5vw;
+}
+
+.windows-folder-text.dark{
+    color: #ffffff;
+}
+
+.windows-search-bar{
+    margin: .5vh;
+    display: flex;
+    border: solid 1px #787878;
+    width: 12vw;
+}
+
+.windows-search-bar.maximize{
+    border-radius: 5px;
+    width: 30vw;
+}
+
+.display-list-component{
+    width: 28vw;
+    height: 41vh;
+}
+
+.display-list-component.maximize{
+    width: 87vw;
+    height: 41vh;
+}
+
+.text-statement{
+    margin-left: 10px;
+    color: rgb(45, 45, 251);
+}
+
+.text-statement.dark{
+    color:#ffffff;
+}
+
+.device-and-drives{
+    height: 10vh;
+    width: 19vw;
+    font-size: 11px;
+    display: flex;
+}
+
+.disk-icon{
+    padding: 1vh;
+    height: 6vh;
+}
+
+.bar-line{
+    background-color: aliceblue;
+    height:2vh;
+    width: 10vw;
+    z-index: 80;
+    border:1px solid #333;
+}
+
+.bar-line.maximize{
+    width: 12vw;
+}
+
+.color-bar-line{
+    background-color: rgb(42, 146, 250); 
+    /* #787878; */
+    height: 2vh;
+    width: 5vw;
+    z-index: 100;
+}
+
+.device-text-statement{
+    margin: 0px;
+    padding: .5vh;
+    font-size: 1.8vh;
+}
+
+.device-text-statement.dark{
+    color:#ffffff
+}
+
+.device-text-statement.normal{
+    padding-top: .1vh;
+    font-size: 1.6vh;
+    color:#787878;
+}
+
+.device-text-statement.normal.dark{
+    color:#bdbbbb
+}
+
+.device-text-statement.quick{
+    padding-top: 1.5vh;
+}
+
+.folders-component.maximize{
+    display: flex;
+    padding-left: 2vh;
+}
+
+.folders{
+    display: flex;
+    margin-left: 1.3vw;
+}

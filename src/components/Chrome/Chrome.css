@@ -30,6 +30,7 @@
 .chrome-header img{
     height: 4vh;
     padding: 1vh;
+    padding-right: 1.5vh;
     cursor: pointer;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .chrome-text{
-    padding: 2vh 0px 1vh 2vh;
+    padding: 2.5vh 5px 1vh 2vh;
     margin: 0px;
     cursor: pointer;
 }
@@ -52,6 +53,8 @@
     width: 14vw;
     padding: 3vh 13vw 1vh 13vw;
     margin: 0px;
+    
+    color: #ffffff;
 }
 
 .google-logo.maximize{
@@ -142,15 +145,4 @@
     transform: scale(1.2);
 }
 
-
- .chrome-pinned-icon-container{
-    margin: 10px;
-    height: 75px;
-    width: 75px;
-    padding: 10px;
- } 
-
- .chrome-pinned-icon-container:hover {
-    background-color: rgb(128, 134, 139);
- }
 

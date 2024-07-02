@@ -11,22 +11,18 @@
     border-radius: 5px;
     /* background-color: white; */
  }
- /* .chrome-pinned-icon-container.dark:hover{
-    background-color: white;
-    color: black;
- } */
 
  .chrome-pinned-img {
     width: 30px;
     height: 30px;
-    padding: 8px 10px;
+    padding: 8px 10px 8px 9px;
   }
 
   .chrome-image-icon-container{
     height: 47px;
     width: 47px;
     margin: 0 14.5px;
-    background-color: #9f9f9f;
+    background-color: #dfdede;
     border-radius: 50px;
   }
   .chrome-image-icon-container.dark{

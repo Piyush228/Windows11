@@ -20,7 +20,7 @@ const Chrome = ({isDarkMode, isMaximize}) => {
         <div className='start-features-icon google-components'>
             <ChromePinnedIcon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`} isDarkMode={isDarkMode}/>
             <ChromePinnedIcon iconName='LinkedIn' iconUrl= {`${process.env.PUBLIC_URL}/linked-in-icon.svg`} isDarkMode={isDarkMode}/>
-            <ChromePinnedIcon iconName='CodeChef' iconUrl= {`${process.env.PUBLIC_URL}/codechef.png`} isDarkMode={isDarkMode}/>
+            <ChromePinnedIcon iconName='CodeChef' iconUrl= {`${process.env.PUBLIC_URL}/codechef${isDarkMode ? '-dark' : ''}.png`} isDarkMode={isDarkMode}/>
             <ChromePinnedIcon iconName='LeetCode' iconUrl= {`${process.env.PUBLIC_URL}/leetCode.png`} isDarkMode={isDarkMode}/>
             { isMaximize && <ChromePinnedIcon iconName='Add shortcut' iconUrl= {`${process.env.PUBLIC_URL}/add-${isDarkMode ? 'dark' : 'light'}.png`} isDarkMode={isDarkMode}/>}
         </div>

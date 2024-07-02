@@ -1,5 +1,17 @@
-
-
-
-
-  
+.another-component-container {
+   font-family: Arial, Helvetica, sans-serif;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 10px;
+   position: absolute;
+   bottom: 60px; /* Adjust this value based on the height of your icon */
+   background-color: white; /* Ensure it's visible against the background */
+   z-index: 1000; /* Ensure it appears above other elements */
+   display: flex;
+ }
+ 
+ .link-text {
+   display: block;
+   margin-top: 8px;
+   cursor: pointer;
+} 

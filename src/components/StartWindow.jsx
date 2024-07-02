@@ -3,7 +3,6 @@ import StartIcon from './StartIcons';
 import './StartWindow.scss';
 import SearchIcon from './SearchIcon';
 import PinnedIcon from './PinnedIcon';
-import Icon from './Icon';
 
 const StartWindow = () => {
   return (
@@ -28,16 +27,16 @@ const StartWindow = () => {
         <div className="line-text-bar bold">Recommended</div>
 
         <div className='start-features-icon'>
-            <StartIcon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`}/>
-            <StartIcon iconName='CodeChef' iconUrl= {`${process.env.PUBLIC_URL}/codechef.png`}/>
+            <StartIcon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`} myLink="https://github.com/Piyush228"/>
+            <StartIcon iconName='CodeChef' iconUrl= {`${process.env.PUBLIC_URL}/codechef.png`} myLink='https://codechef.com/users/piyush228/'/>
         </div>
         <div className='start-features-icon'>
-            <StartIcon iconName='LinkedIn' iconUrl= {`${process.env.PUBLIC_URL}/linked-in-icon.svg`}/>
-            <StartIcon iconName='LeetCode' iconUrl= {`${process.env.PUBLIC_URL}/leetCode.png`}/>
+            <StartIcon iconName='LinkedIn' iconUrl= {`${process.env.PUBLIC_URL}/linked-in-icon.svg`} myLink="https://www.linkedin.com/in/meetpiyushverma/"/>
+            <StartIcon iconName='LeetCode' iconUrl= {`${process.env.PUBLIC_URL}/leetCode.png`} myLink="#"/>
         </div>
         <div className='start-features-icon'>
             <StartIcon iconName='Download PDF Resume' iconUrl= {`${process.env.PUBLIC_URL}/pdf.png`}/>
-            <StartIcon iconName='My First Project' iconUrl= {`${process.env.PUBLIC_URL}/game-controller.png`}/>
+            <StartIcon iconName='My First Project' iconUrl= {`${process.env.PUBLIC_URL}/game-controller.png`} myLink="https://phoenix-gaming-website.netlify.app/"/>
         </div>
       </div>
       <div className='start-user-taskbar-component'>

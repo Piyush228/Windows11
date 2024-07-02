@@ -3,9 +3,14 @@
 import React from 'react';
 import './StartWindow.scss';
 
-const StartIcon = ({ iconName, iconUrl }) => {
+const StartIcon = ({ iconName, iconUrl, myLink='#' }) => {
+  const handleLinkClick = () => {
+    if(myLink != '#')
+      window.open(myLink, '_blank');
+  };
+
   return (
-    <div className= "start-user-component">
+    <div onClick={handleLinkClick} className= "start-user-component">
       <img src={iconUrl} alt={iconName} className="start-icon" />
       <div className="line-text-bar">{iconName}</div>
     </div>
