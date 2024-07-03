@@ -9,7 +9,7 @@ const images = [
   'Image+5.png',
   'Image+6.png',
   'Image+7.png',
-  'Image+8.png'
+  'image+8.png'
 ];
 
 const Photos = ({ isDarkMode, isMaximize }) => {
