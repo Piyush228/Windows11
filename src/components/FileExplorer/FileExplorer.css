@@ -143,14 +143,17 @@
 .windows-folder-text{
     margin: 2px 1vh;
     font-size: 12px;
-    padding-right: 11vh;
+    padding-right: 5vh;
+    color:#545454;
+    width: 10vw;
 }
 
 .windows-folder-text.maximize{
     font-size: 1.9vh;
     margin: 1vh 1.5vh;
     padding-right: 5vw;
-    margin-right: 16.5vw;
+    margin-right: 11.5vw;
+    width: 10vw;
 }
 
 .windows-folder-text.dark{
