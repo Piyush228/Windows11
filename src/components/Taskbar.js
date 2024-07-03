@@ -23,7 +23,7 @@ const Taskbar= ()=> {
       <div className="taskbar-centre">
         <Icon iconName='Start' iconUrl= {`${process.env.PUBLIC_URL}/start-icon.png`} componentName= {StartWindow}/>
         <SearchIcon />
-        <AppIcon iconName='Notepad' iconUrl= {`${process.env.PUBLIC_URL}/Notepad.png`} componentName={AppComponent} childComponentName={Notepad}/>
+        <AppIcon iconName='Notepad' iconUrl= {`${process.env.PUBLIC_URL}/notepad.png`} componentName={AppComponent} childComponentName={Notepad}/>
         <Icon iconName='Github' iconUrl= {`${process.env.PUBLIC_URL}/github.svg`} message="Github Profile:" myLink="https://github.com/Piyush228"/>
         <AppIcon iconName='Chrome' iconUrl= {`${process.env.PUBLIC_URL}/chrome-icon.svg`} componentName={AppComponent} childComponentName={Chrome}/>
         <AppIcon iconName='Photos' iconUrl= {`${process.env.PUBLIC_URL}/photos.png`} componentName={AppComponent} childComponentName={Photos}/>
